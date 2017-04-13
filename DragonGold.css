@@ -1,0 +1,15 @@
+img#Knight {
+	position: absolute;
+	top: 30%;
+	left: 20%;
+	z-index:1;
+
+}
+
+img#Dragon {
+	position: absolute;
+	top: 25%;
+	right: 20%;
+	z-index:1;
+
+}
