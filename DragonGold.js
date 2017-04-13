@@ -8,14 +8,17 @@ $(document).ready(function(){
 
 	//Variables******************
 
-	var gold = 0;
+	var goldValue = document.getElementById('Gold');
 	var playerClick = document.getElementById('Dragon');
+	var gold = 0;
 
 	//Constructors******************
 
 	playerClick.addEventListener('click', function(event) {
 		gold += 1;
-		alert("Your total Gold: "+gold);
+		//innerHTML is the content of an element - this is basically taking the number of gold and displaying it in html.
+		goldValue.innerHTML = gold;
+		
 	})
 
 
