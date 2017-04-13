@@ -10,6 +10,7 @@ $(document).ready(function(){
 
 	var goldValue = document.getElementById('Gold');
 	var playerGoldClick = document.getElementById('Dragon');
+	var eWeapon = document.getElementById('Equip');
 	var playerItem1Click = document.getElementById('s1');
 	var soldout1 = false;
 	var playerItem2Click = document.getElementById('s2');
@@ -41,6 +42,7 @@ $(document).ready(function(){
 			playerItem1Click.src = "images/soldout.png";
 			goldValue.innerHTML = gold;
 			soldout1 = true;
+			eWeapon.src = "images/esword1.png";
 		}
 	})
 
@@ -53,6 +55,7 @@ $(document).ready(function(){
 			goldValue.innerHTML = gold;
 			soldout1 = true;
 			soldout2 = true;
+			eWeapon.src = "images/esword2.png";
 		}
 	})
 
@@ -67,6 +70,7 @@ $(document).ready(function(){
 			soldout2 = true;
 			soldout3 = true;
 			winGame = true;
+			eWeapon.src = "images/esword3.png";
 		}
 	})
 
