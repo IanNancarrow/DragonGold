@@ -1,43 +1,64 @@
 body {
-	height:500px;
-	width: 500px;
+	background-image: url("images/phbg.png");
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 img#Knight {
 	position: relative;
-	top: 25%;
-	left: 30%;
+	top: 100px;
+	left: 200px;
+
+
 	z-index: 1;
 
 }
 
+/*Relative to the Knight's position, sword is held at -45 top and -15 left*/
+
 img#Equip {
 	position: relative;
-	top: -2.8em;
-	left: 27.5%;
+	top: 55px;
+	left: 185px;
 	z-index: 0;
 }
 
 img#Dragon {
 	position: relative;
-	top: 25%;
-	left: 60%;
+	top: 100px;
+	left: 430px;
+
 	z-index: 1;
 
 }
 
 p#Counter{
 	position: relative;
-	text-align:center;
-	top:5%;
-	left:5%;
+	top: 150px;
+	left: 260px;
+	font-family: "Courier New", monospace;
+	font-weight: bold;
+	color: gold;
+	text-shadow: 1px 1px black;
 	z-index: 2;
 
 }
 
 table {
 	position: relative;
+	background-color: tan;
+	border: double;
 	text-align: center;
-	top: 0;
-	z-index: 0;
+	font-family: "Courier New", monospace;
+	font-weight: bold;
+	color: white;
+	text-shadow: 1px 1px black;
+	top: 180px;
+	left: 300px;
+	z-index: 1;
+}
+
+td {
+	background-color: tan;
+	border: double;
 }
