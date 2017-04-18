@@ -61,19 +61,16 @@ img#Knight {
 img#Equip {
 	position: relative;
 	top: -35px;
-	left: 185px;
+	left: 160px;
 	-webkit-animation: breathing 4s ease-out infinite normal;
     animation: breathing 4s ease-out infinite normal;
 	z-index: 0;
-
-
-    
 }
 
 img#Dragon {
 	position: relative;
 	top: 10px;
-	left: 430px;
+	left: 400px;
 	-webkit-animation: breathing 4s ease-out infinite normal;
     animation: breathing 4s ease-out infinite normal;
 	z-index: 1;
@@ -91,6 +88,32 @@ p#Counter{
 	text-shadow: 1px 1px black;
 	z-index: 2;
 
+}
+
+p#HPStat{
+	position: relative;
+	top: 65px;
+	left: 260px;
+	font-family: "Courier New", monospace;
+	font-weight: bold;
+
+	color: red;
+	text-shadow: 1px 1px black;
+	z-index: 2;
+
+}
+
+#Flavor{
+	position: relative;
+	top: 0px;
+	left: 260px;
+	font-family: "Courier New", monospace;
+	font-weight: bold;
+	text-align: center;
+	font-size: 20px;
+	color: white;
+	text-shadow: 1px 1px black;
+	z-index: 0;
 }
 
 table {
