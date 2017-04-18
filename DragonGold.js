@@ -4,6 +4,14 @@
 $(document).ready(function(){
    //Tools******************
 
+var sleep = function(milliseconds) {
+  var start = new Date().getTime();
+  for (var i = 0; i < 1e7; i++) {
+    if ((new Date().getTime() - start) > milliseconds) {
+    break;
+    }
+  }
+};
 
 
 	//Variables******************
@@ -11,6 +19,7 @@ $(document).ready(function(){
 	var goldValue = document.getElementById('Gold');
 	var playerGoldClick = document.getElementById('Dragon');
 	var eWeapon = document.getElementById('Equip');
+	var playerDefend = document.getElementById('Knight');
 	var playerItem1Click = document.getElementById('s1');
 	var soldout1 = false;
 	var playerItem2Click = document.getElementById('s2');
@@ -20,8 +29,30 @@ $(document).ready(function(){
 	var goldGain = 1;
 	var winGame = false;
 	var gold = 0;
+	var health = document.getElementById('Health');
+	var defending = false;
 
-	//Constructors******************
+	//Functions******************
+
+	playerDefend.addEventListener('mouseover', function(event) {
+		playerDefend.src = "images/knightd.png";
+		eWeapon.style.visibility = "hidden";
+		defending = true;
+		// sleep(2000);
+		// playerDefend.src = "images/knight.png"
+		// defending = false;
+	})
+
+	playerDefend.addEventListener('mouseout', function(event) {
+		playerDefend.src = "images/knight.png";
+		eWeapon.style.visibility = "visible";
+		defending = false;
+		// sleep(2000);
+		// playerDefend.src = "images/knight.png"
+		// defending = false;
+	})
+
+
 
 	playerGoldClick.addEventListener('click', function(event) {
 		if (winGame == false) {

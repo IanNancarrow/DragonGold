@@ -8,11 +8,53 @@ img#Knight {
 	position: relative;
 	top: 10px;
 	left: 200px;
-
-
-	z-index: 1;
-
+    -webkit-animation: breathing 4s ease-out infinite normal;
+    animation: breathing 4s ease-out infinite normal;
+    z-index: 1;
 }
+
+
+@-webkit-keyframes breathing {
+  0% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+  }
+
+  50% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+  }
+}
+
+@keyframes breathing {
+  0% {
+    -webkit-transform: scale(0.98);
+    -ms-transform: scale(0.98);
+    transform: scale(0.98);
+  }
+
+  50% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    -webkit-transform: scale(0.98);
+    -ms-transform: scale(0.98);
+    transform: scale(0.98);
+  }
+}
+
+
+    /* transform:scale(1.1); */
+
+	
 
 /*Relative to the Knight's position, sword is held at -45 top and -15 left*/
 
@@ -20,14 +62,20 @@ img#Equip {
 	position: relative;
 	top: -35px;
 	left: 185px;
+	-webkit-animation: breathing 4s ease-out infinite normal;
+    animation: breathing 4s ease-out infinite normal;
 	z-index: 0;
+
+
+    
 }
 
 img#Dragon {
 	position: relative;
 	top: 10px;
 	left: 430px;
-
+	-webkit-animation: breathing 4s ease-out infinite normal;
+    animation: breathing 4s ease-out infinite normal;
 	z-index: 1;
 
 }
