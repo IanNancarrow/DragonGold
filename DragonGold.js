@@ -31,13 +31,13 @@ $(document).ready(function(){
 		} else if (winGame == true) {
 			gold = 1000000;
 			goldValue.innerHTML = gold;
-			playerGoldClick.src = "images/soldout.png";
+			playerGoldClick.src = "images/boom.png";
 		}
 	})
 
 	playerItem1Click.addEventListener('click', function(event) {
-		if (gold >= 100 && soldout1 == false) {
-			gold -= 100;
+		if (gold >= 20 && soldout1 == false) {
+			gold -= 20;
 			goldGain = 2;
 			playerItem1Click.src = "images/soldout.png";
 			goldValue.innerHTML = gold;
@@ -47,8 +47,8 @@ $(document).ready(function(){
 	})
 
 	playerItem2Click.addEventListener('click', function(event) {
-		if (gold >= 500 && soldout2 == false) {
-			gold -= 500;
+		if (gold >= 50 && soldout2 == false) {
+			gold -= 50;
 			goldGain = 5;
 			playerItem1Click.src = "images/soldout.png";
 			playerItem2Click.src = "images/soldout.png";
@@ -60,8 +60,8 @@ $(document).ready(function(){
 	})
 
 	playerItem3Click.addEventListener('click', function(event) {
-		if (gold >= 1000 && soldout3 == false) {
-			gold -= 1000;
+		if (gold >= 100 && soldout3 == false) {
+			gold -= 100;
 			playerItem1Click.src = "images/soldout.png";
 			playerItem2Click.src = "images/soldout.png";
 			playerItem3Click.src = "images/soldout.png";
