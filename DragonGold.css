@@ -6,42 +6,121 @@ body {
 
 img#Knight {
 	position: relative;
-	top: 100px;
+	top: 10px;
 	left: 200px;
-
-
-	z-index: 1;
-
+    -webkit-animation: breathing 4s ease-out infinite normal;
+    animation: breathing 4s ease-out infinite normal;
+    z-index: 1;
 }
+
+
+		@-webkit-keyframes breathing {
+		  0% {
+		    -webkit-transform: scale(0.98);
+		    transform: scale(0.98);
+		  }
+
+		  50% {
+		    -webkit-transform: scale(1);
+		    transform: scale(1);
+		  }
+
+		  100% {
+		    -webkit-transform: scale(0.98);
+		    transform: scale(0.98);
+		  }
+		}
+
+		@keyframes breathing {
+		  0% {
+		    -webkit-transform: scale(0.98);
+		    -ms-transform: scale(0.98);
+		    transform: scale(0.98);
+		  }
+
+		  50% {
+		    -webkit-transform: scale(1);
+		    -ms-transform: scale(1);
+		    transform: scale(1);
+		  }
+
+		  100% {
+		    -webkit-transform: scale(0.98);
+		    -ms-transform: scale(0.98);
+		    transform: scale(0.98);
+		  }
+		}
+
+
+    /* transform:scale(1.1); */
+
+	
 
 /*Relative to the Knight's position, sword is held at -45 top and -15 left*/
 
 img#Equip {
 	position: relative;
-	top: 55px;
-	left: 185px;
+	top: -35px;
+	left: 160px;
+	-webkit-animation: breathing 4s ease-out infinite normal;
+    animation: breathing 4s ease-out infinite normal;
 	z-index: 0;
 }
 
 img#Dragon {
 	position: relative;
-	top: 100px;
-	left: 430px;
-
+	top: 10px;
+	left: 400px;
+	-webkit-animation: breathing 4s ease-out infinite normal;
+    animation: breathing 4s ease-out infinite normal;
 	z-index: 1;
 
 }
 
+img#Slash {
+	position: absolute;
+	top: 80px;
+	left:680px;
+	z-index: 2;
+}
+
 p#Counter{
 	position: relative;
-	top: 150px;
+	top: 80px;
 	left: 260px;
 	font-family: "Courier New", monospace;
 	font-weight: bold;
+
 	color: gold;
 	text-shadow: 1px 1px black;
 	z-index: 2;
 
+}
+
+p#HPStat{
+	position: relative;
+	top: 65px;
+	left: 260px;
+	font-family: "Courier New", monospace;
+	font-weight: bold;
+
+	color: red;
+	text-shadow: 1px 1px black;
+	z-index: 2;
+
+}
+
+#Flavor{
+	position: absolute;
+	top: 150px;
+	left: 350px;
+	font-family: "Courier New", monospace;
+	font-weight: bold;
+	text-align: center;
+	font-size: 30px;
+	color: cyan;
+	text-shadow: 1px 1px black;
+	z-index: 0;
 }
 
 table {
@@ -53,7 +132,7 @@ table {
 	font-weight: bold;
 	color: white;
 	text-shadow: 1px 1px black;
-	top: 180px;
+	top: 100px;
 	left: 300px;
 	z-index: 1;
 }
