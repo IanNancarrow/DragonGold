@@ -33,8 +33,31 @@ var sleep = function(milliseconds) {
 	var health = document.getElementById('Health');
 	var defending = false;
 	var playerDied = false;
+	var clickCount = 0;
+	var clickSlash = document.getElementById('Slash');
 
 	//Functions******************
+
+	function clickCounter() {
+		clickCount += 1;
+		if (clickCount == 1) {
+			clickSlash.src ="images/slash1.png";
+			$('#Slash').show();
+			$('#Slash').fadeOut();
+		} else if (clickCount == 2) {
+			clickSlash.src ="images/slash2.png";
+			$('#Slash').show();
+			$('#Slash').fadeOut();
+		} else if (clickCount == 3) {
+			clickSlash.src ="images/slash3.png";
+			$('#Slash').show();
+			$('#Slash').fadeOut();
+			clickCount = 0;
+		}
+
+	}
+
+
 
 	playerDefend.addEventListener('mouseover', function(event) {
 		if (playerDied == false) {
@@ -63,6 +86,9 @@ var sleep = function(milliseconds) {
 	playerGoldClick.addEventListener('click', function(event) {
 		if (playerDied == false) {
 			if (winGame == false) {
+				playerDefend.src = "images/knight.png";
+				eWeapon.style.visibility = "visible";
+				clickCounter();
 				gold += goldGain;
 				//innerHTML is the content of an element - this is basically taking the number of gold and displaying it in html.
 				goldValue.innerHTML = gold;
@@ -122,23 +148,16 @@ var sleep = function(milliseconds) {
 	})
 
 	function delayer() {
+		$('#Flavor').hide();
 		setTimeout(function(){ randomAttack(); }, 3000);
 	}
 
 	function randomAttack() {
-		if (hp >= 1) {
-			playerGoldClick.src = "images/dragon.png";
-			playerDefend.src = "images/knight.png";
-			eWeapon.style.visibility = "visible";
-			var ranNum = Math.floor((Math.random() * 5000) + 1000);
-		    setTimeout(function(){ attacking(); }, ranNum);
-		} else if (hp <= 0) {
-			hp = 0;
-			health.innerHTML = hp;
-			playerDied = true;
-			playerDefend.src = "images/RIP.png";
-			eWeapon.style.visibility = "hidden";
-		}
+		playerGoldClick.src = "images/dragon.png";
+		// playerDefend.src = "images/knight.png";
+		// eWeapon.style.visibility = "visible";
+		var ranNum = Math.floor((Math.random() * 5000) + 1000);
+	    setTimeout(function(){ attacking(); }, ranNum);
 	}
 
 	function attacking() {
@@ -155,12 +174,25 @@ var sleep = function(milliseconds) {
 		//playerGoldClick.src = "images/dattack.png";
 		
 		if (defending == true) {
+			$('#Flavor').show();
+			$('#Flavor').fadeOut();
+			playerDefend.src = "images/knightdd.png"
 			randomAttack();
 		} else if (defending == false) {
 			var ranDam = Math.floor((Math.random() * 50) + 5);
 			hp -= ranDam;
 			health.innerHTML = hp;
-			knightHit();
+			if (hp <= 0) {
+				hp = 0;
+				health.innerHTML = hp;
+				playerDied = true;
+				playerDefend.src = "images/RIP.png";
+				eWeapon.style.visibility = "hidden";
+			} else {
+				playerGoldClick.src = "images/dragon.png";
+				knightHit();
+			}
+
 		}
 	}
 
